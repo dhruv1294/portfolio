@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  --background: #e8e8e8;
+  --foreground: #171717;
+  --card-bg: #ffffff;
+  --terminal-header: #2d3748;
+  --accent: #3b82f6;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card-bg);
+  --color-terminal: var(--terminal-header);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Typing cursor animation */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.typing-cursor {
+  animation: blink 1s infinite;
+}
+
+/* Timeline styles */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: #cbd5e1;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
