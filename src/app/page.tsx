@@ -8,10 +8,10 @@ export default function Home() {
     <div className="min-h-screen pt-24 pb-16 px-4">
       {/* Hero Section */}
       <section className="max-w-4xl mx-auto text-center mb-16">
-        <h1 className="text-5xl font-bold mb-4">
+        <h1 className="text-5xl font-bold mb-4 text-[var(--text-primary)]">
           Hi! I&apos;m {profile.name}
         </h1>
-        <p className="text-xl text-gray-500 h-8">
+        <p className="text-xl text-[var(--text-secondary)] h-8">
           <TypingAnimation words={profile.typingWords} />
         </p>
       </section>
@@ -26,7 +26,7 @@ export default function Home() {
         <a
           href={profile.resumeUrl}
           download
-          className="inline-block px-8 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition-colors shadow-md"
+          className="inline-block px-8 py-3 bg-[var(--accent)] text-white font-semibold rounded-lg hover:bg-[var(--accent-hover)] transition-colors shadow-md"
         >
           DOWNLOAD MY RESUME
         </a>
@@ -44,7 +44,7 @@ export default function Home() {
             href={profile.contact.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-500 hover:text-gray-800 transition-colors"
+            className="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors"
           >
             GitHub
           </a>
@@ -52,13 +52,13 @@ export default function Home() {
             href={profile.contact.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-500 hover:text-gray-800 transition-colors"
+            className="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors"
           >
             LinkedIn
           </a>
           <a
             href={`mailto:${profile.contact.email}`}
-            className="text-gray-500 hover:text-gray-800 transition-colors"
+            className="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors"
           >
             Email
           </a>

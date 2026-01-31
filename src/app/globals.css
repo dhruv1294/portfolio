@@ -1,27 +1,66 @@
 @import "tailwindcss";
 
+/* Light theme (default) */
 :root {
-  --background: #e8e8e8;
-  --foreground: #171717;
-  --card-bg: #ffffff;
-  --terminal-header: #2d3748;
+  --bg-primary: #e8e8e8;
+  --bg-card: #ffffff;
+  --bg-terminal: #2d3748;
+  --bg-input: #f5f5f5;
+  --text-primary: #171717;
+  --text-secondary: #6b7280;
+  --text-muted: #9ca3af;
+  --border-color: #e5e7eb;
   --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --user-bubble: #3b82f6;
+  --ai-bubble: #f3f4f6;
+  --nav-bg: rgba(232, 232, 232, 0.9);
+  --timeline-line: #9ca3af;
+  --toggle-track: #d1d5db;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --bg-primary: #0f0f0f;
+  --bg-card: #1a1a1a;
+  --bg-terminal: #2d3748;
+  --bg-input: #252525;
+  --text-primary: #e5e5e5;
+  --text-secondary: #a1a1a1;
+  --text-muted: #737373;
+  --border-color: #2d2d2d;
+  --accent: #3b82f6;
+  --accent-hover: #60a5fa;
+  --user-bubble: #3b82f6;
+  --ai-bubble: #252525;
+  --nav-bg: rgba(15, 15, 15, 0.9);
+  --timeline-line: #4b5563;
+  --toggle-track: #374151;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card-bg);
-  --color-terminal: var(--terminal-header);
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-card: var(--bg-card);
+  --color-bg-terminal: var(--bg-terminal);
+  --color-bg-input: var(--bg-input);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-border: var(--border-color);
   --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-user-bubble: var(--user-bubble);
+  --color-ai-bubble: var(--ai-bubble);
+  --color-nav-bg: var(--nav-bg);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--bg-primary);
+  color: var(--text-primary);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Typing cursor animation */
@@ -34,19 +73,7 @@ body {
   animation: blink 1s infinite;
 }
 
-/* Timeline styles */
-.timeline-line {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 2px;
-  height: 100%;
-  background: #cbd5e1;
-}
-
-.timeline-icon {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
+/* Smooth transitions for theme change */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.2s ease;
 }
