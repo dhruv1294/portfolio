@@ -49,7 +49,7 @@ export const profile = {
     {
       title: "MS in Computer Science",
       company: "University of Wisconsin-Madison",
-      companyDescription: "Aug 2025 - May 2027 (GPA: 3.83/4)",
+      companyDescription: "Aug 2025 - Present (GPA: 3.83/4)",
       description: "Focusing on Big Data Systems, Distributed Systems, and Foundation Models.",
       skills: ["Spark", "Kafka", "Cassandra", "PyTorch", "Docker", "gRPC", "Python", "Linux", "Distributed Systems", "Foundation Models"],
       icon: "education" as const,
