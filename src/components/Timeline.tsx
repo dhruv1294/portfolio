@@ -44,41 +44,45 @@ function TimelineLogo({ logo, company }: { logo?: string; company: string }) {
 export default function Timeline({ items }: TimelineProps) {
   return (
     <div className="relative">
-      {/* Vertical line */}
+      {/* Vertical line - hidden on mobile, centered on desktop */}
       <div
-        className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-[#3b82f6] opacity-40"
+        className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-[#3b82f6] opacity-40"
+      />
+      {/* Vertical line for mobile - on the left */}
+      <div
+        className="md:hidden absolute left-7 w-0.5 h-full bg-[#3b82f6] opacity-40"
       />
 
-      <div className="space-y-12">
+      <div className="space-y-8 md:space-y-12">
         {items.map((item, index) => (
           <div key={index} className="relative">
-            {/* Logo in center */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
+            {/* Logo - left on mobile, center on desktop */}
+            <div className="absolute left-0 md:left-1/2 md:transform md:-translate-x-1/2 z-10">
               <TimelineLogo logo={item.logo} company={item.company} />
             </div>
 
-            {/* Card */}
+            {/* Card - full width on mobile with left padding, alternating on desktop */}
             <div
-              className={`w-5/12 ${
-                item.side === "right" ? "ml-auto pl-8" : "mr-auto pr-8"
+              className={`ml-20 md:ml-0 md:w-5/12 ${
+                item.side === "right" ? "md:ml-auto md:pl-8" : "md:mr-auto md:pr-8"
               }`}
             >
-              <div className="bg-[var(--bg-card)] rounded-lg p-6 shadow-md border border-[var(--border-color)]">
-                <h3 className="text-xl font-bold text-[var(--text-primary)]">{item.title}</h3>
+              <div className="bg-[var(--bg-card)] rounded-lg p-4 md:p-6 shadow-md border border-[var(--border-color)]">
+                <h3 className="text-lg md:text-xl font-bold text-[var(--text-primary)]">{item.title}</h3>
                 <p className="text-[var(--text-secondary)] text-sm mt-1">{item.company}</p>
                 {item.companyDescription && (
                   <p className="text-[var(--text-muted)] text-xs mt-1">
                     {item.companyDescription}
                   </p>
                 )}
-                <p className="text-[var(--text-primary)] font-medium mt-3">
+                <p className="text-[var(--text-primary)] text-sm md:text-base font-medium mt-3">
                   {item.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mt-4">
                   {item.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="px-3 py-1 text-xs border border-[var(--border-color)] rounded-full text-[var(--text-secondary)]"
+                      className="px-2 md:px-3 py-1 text-xs border border-[var(--border-color)] rounded-full text-[var(--text-secondary)]"
                     >
                       {skill}
                     </span>
