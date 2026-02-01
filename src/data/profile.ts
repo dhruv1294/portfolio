@@ -8,7 +8,7 @@ export const profile = {
   typingWords: [
     "A Software Engineer",
     "A Problem Solver",
-    "A Big Data Enthusiast",
+    "A Tech Enthusiast",
     "A Full-Stack Developer",
   ],
 
@@ -16,7 +16,7 @@ export const profile = {
   bioLines: [
     "I'm a software engineer with 2+ years of experience at Oracle, working on Big Data cloud services.",
     "Currently pursuing my Master's in Computer Science at UW-Madison, focusing on distributed systems and AI.",
-    "I'm fluent in Python, Java, Scala, and love building scalable backend systems.",
+    "I'm fluent in Python, Java, C++, and love building scalable backend systems and automation tools.",
   ],
 
   // Resume file path (place your resume in /public folder)
@@ -40,16 +40,18 @@ export const profile = {
     "OCI",
     "Flutter",
     "PyTorch",
+    "Shell Scripting",
+    "Pytest"
   ],
 
   // Timeline items for home page (highlights)
   timeline: [
     {
-      title: "Master of Science",
+      title: "MS in Computer Science",
       company: "University of Wisconsin-Madison",
-      companyDescription: "MS in Computer Science (GPA: 3.83/4)",
+      companyDescription: "Aug 2025 - May 2027 (GPA: 3.83/4)",
       description: "Focusing on Big Data Systems, Distributed Systems, and Foundation Models.",
-      skills: ["Spark", "Kafka", "Cassandra", "PyTorch", "Docker", "gRPC"],
+      skills: ["Spark", "Kafka", "Cassandra", "PyTorch", "Docker", "gRPC", "Python", "Linux", "Distributed Systems", "Foundation Models"],
       icon: "education" as const,
       side: "left" as const,
       logo: "/logos/UW_madison.png",
@@ -59,7 +61,7 @@ export const profile = {
       company: "Oracle Cloud - Big Data Service",
       companyDescription: "Jul 2023 - Aug 2025 | Bangalore, India",
       description: "Built data plane APIs, optimized build times by 75%, fixed customer-impacting bugs in Hadoop ecosystem.",
-      skills: ["Python", "Flask", "Redis", "Hadoop", "Pytest", "OCI", "Shell Scripting"],
+      skills: ["Python", "Flask", "Redis", "Hadoop", "Pytest", "OCI", "Shell Scripting", "Apache Bigtop", "Apache Ambari", "emberjs", "Microservices"],
       icon: "work" as const,
       side: "right" as const,
       logo: "/logos/oracle.png",
@@ -69,7 +71,7 @@ export const profile = {
       company: "Oracle Cloud - Fusion Data Lake",
       companyDescription: "Jun 2022 - Jul 2022 | Bangalore, India",
       description: "Built a MergeInto Validator plugin in Scala using Apache Spark, reducing debugging time by 83%.",
-      skills: ["Scala", "Apache Spark", "Delta Lake"],
+      skills: ["Scala", "Apache Spark", "Delta Lake", "Junit"],
       icon: "internship" as const,
       side: "left" as const,
       logo: "/logos/oracle.png",
@@ -79,7 +81,7 @@ export const profile = {
       company: "NIT Tiruchirappalli",
       companyDescription: "Jul 2019 - May 2023 (GPA: 8.64/10)",
       description: "Studied algorithms, OS, networks, ML, databases, and distributed systems.",
-      skills: ["Data Structures", "Algorithms", "Machine Learning", "DBMS", "OS"],
+      skills: ["Data Structures", "Algorithms", "Machine Learning", "DBMS", "OS", "Computer Networks", "Native Android", "Flutter", "Java", "Kotlin"],
       icon: "education" as const,
       side: "right" as const,
       logo: "/logos/NITT_logo.png",
@@ -125,7 +127,7 @@ export const profile = {
       duration: "Aug 2025 - May 2027",
       gpa: "3.83/4.0",
       logo: "/logos/UW_madison.png",
-      coursework: ["Big Data Systems", "Distributed Systems", "Foundation Models", "Machine Learning"],
+      coursework: ["Big Data Systems", "Distributed Systems", "Foundation Models", "Advanced Operating Systems", "Artificial Intelligence"],
     },
     {
       degree: "B.Tech in Computer Science and Engineering",
@@ -134,7 +136,7 @@ export const profile = {
       duration: "Jul 2019 - May 2023",
       gpa: "8.64/10",
       logo: "/logos/NITT_logo.png",
-      coursework: ["Data Structures & Algorithms", "Operating Systems", "Computer Networks", "Machine Learning", "Database Management Systems"],
+      coursework: ["Data Structures & Algorithms", "Operating Systems", "Computer Networks", "Machine Learning", "Database Management Systems", "Software Engineering"],
     },
   ],
 
@@ -145,6 +147,7 @@ export const profile = {
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel AI SDK", "Claude API"],
       link: "#",
       github: "https://github.com/dhruv1294/portfolio",
+      image: "/projects/portfolio.png",
     },
     {
       name: "Dalal Street",
@@ -152,6 +155,7 @@ export const profile = {
       technologies: ["Dart", "Flutter", "gRPC", "Bloc"],
       link: "#",
       github: "https://github.com/delta/dalal-street-client",
+      image: "/projects/dalal-street.webp",
     },
     {
       name: "Smart Note",
@@ -159,6 +163,31 @@ export const profile = {
       technologies: ["Kotlin", "Android", "MVVM", "Google ML Kit", "SQLite Room"],
       link: "#",
       github: "https://github.com/dhruv1294/smart-note",
+      image: "/projects/smart-note.jpg",
+    },
+    {
+      name: "NITT News & Updates",
+      description: "Android app for NIT Trichy students to get latest news, view PDF notices, and chat with admins. Features Firebase real-time database, cloud messaging, and event reminder notifications.",
+      technologies: ["Java", "Android", "Firebase", "Retrofit", "Cloud Messaging"],
+      link: "#",
+      github: "https://github.com/dhruv1294/NIT_Trichy",
+      image: "/logos/NITT_logo.png",
+    },
+    {
+      name: "Vortex 21",
+      description: "Official Android app for NIT Trichy's annual CSE symposium. Enables participation in workshops, events, and guest lectures with real-time updates. Published on Google Play Store.",
+      technologies: ["Kotlin", "Android", "Firebase", "Gradle KTS"],
+      link: "#",
+      github: "https://github.com/dhruv1294/android-vortex-21",
+      image: "/projects/vortex.png",
+    },
+    {
+      name: "Pokedex",
+      description: "Android app with comprehensive Pokémon database covering all generations. Features regions, locations, items, types, favorites system, and social sharing with Material Design UI.",
+      technologies: ["Java", "Android", "MVVM", "Room", "Retrofit", "LiveData"],
+      link: "#",
+      github: "https://github.com/dhruv1294/Pokedex",
+      image: "/projects/pokedex.png",
     },
   ],
 

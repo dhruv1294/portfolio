@@ -1,4 +1,5 @@
 import { profile } from "@/data/profile";
+import Image from "next/image";
 
 export default function Projects() {
   return (
@@ -11,8 +12,19 @@ export default function Projects() {
           {profile.projects.map((project, index) => (
             <div
               key={index}
-              className="p-6 bg-[var(--bg-card)] rounded-lg shadow-md border border-[var(--border-color)] flex flex-col"
+              className="bg-[var(--bg-card)] rounded-lg shadow-md border border-[var(--border-color)] flex flex-col overflow-hidden"
             >
+              {project.image && (
+                <div className="relative w-full h-40 bg-[var(--bg-primary)]">
+                  <Image
+                    src={project.image}
+                    alt={`${project.name} screenshot`}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              )}
+              <div className="p-6 flex flex-col flex-grow">
               <h2 className="text-xl font-bold mb-2 text-[var(--text-primary)]">
                 {project.name}
               </h2>
@@ -54,6 +66,7 @@ export default function Projects() {
                     Live Demo
                   </a>
                 )}
+              </div>
               </div>
             </div>
           ))}
