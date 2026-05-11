@@ -48,13 +48,13 @@ export const profile = {
   // Timeline items for home page (highlights)
   timeline: [
     {
-      title: "Incoming Software Engineering Intern",
+      title: "Software Engineering Intern",
       company: "Salesforce - Data Cloud Real Time",
       companyDescription: "May 2026 - Aug 2026 | San Francisco, United States",
       description: "Building AI agents and working on agentic memory for Salesforce's real-time data platform.",
       skills: ["AI Agents", "Agentic Memory", "Real-Time Systems", "Data Processing"],
       icon: "internship" as const,
-      side: "left" as const,
+      side: "right" as const,
       logo: "/logos/salesforce.png",
     },
     {
@@ -102,7 +102,7 @@ export const profile = {
   // Detailed experience for About page
   experience: [
     {
-      title: "Incoming Software Engineering Intern",
+      title: "Software Engineering Intern",
       company: "Salesforce - Data Cloud Real Time Team",
       location: "San Francisco, United States",
       duration: "May 2026 - Aug 2026",
