@@ -16,6 +16,7 @@ export const profile = {
   bioLines: [
     "I'm a software engineer with 2+ years of experience at Oracle, working on Big Data cloud services.",
     "Currently pursuing my Master's in Computer Science at UW-Madison, focusing on distributed systems and AI.",
+    "Joining Salesforce this summer as an SWE Intern on the Data Cloud Real Time team in San Francisco.",
     "I'm fluent in Python, Java, C++, and love building scalable backend systems and automation tools.",
   ],
 
@@ -46,6 +47,16 @@ export const profile = {
 
   // Timeline items for home page (highlights)
   timeline: [
+    {
+      title: "Incoming Software Engineering Intern",
+      company: "Salesforce - Data Cloud Real Time",
+      companyDescription: "May 2026 - Aug 2026 | San Francisco, United States",
+      description: "Building AI agents and working on agentic memory for Salesforce's real-time data platform.",
+      skills: ["AI Agents", "Agentic Memory", "Real-Time Systems", "Data Processing"],
+      icon: "internship" as const,
+      side: "left" as const,
+      logo: "/logos/salesforce.png",
+    },
     {
       title: "MS in Computer Science",
       company: "University of Wisconsin-Madison",
@@ -90,6 +101,16 @@ export const profile = {
 
   // Detailed experience for About page
   experience: [
+    {
+      title: "Incoming Software Engineering Intern",
+      company: "Salesforce - Data Cloud Real Time Team",
+      location: "San Francisco, United States",
+      duration: "May 2026 - Aug 2026",
+      logo: "/logos/salesforce.png",
+      highlights: [
+        "Joining the Data Cloud Real Time team to build AI agents, focusing on agentic memory for Salesforce's real-time data unification and activation platform.",
+      ],
+    },
     {
       title: "Member of Technical Staff",
       company: "Oracle Cloud - Big Data Service (BDS) Team",
